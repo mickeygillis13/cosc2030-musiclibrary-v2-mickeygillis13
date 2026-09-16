@@ -3,9 +3,7 @@
 
 using namespace std;
 
-class Artist {
-// TODO
-}; 
+a
 
 class Song {
     //TODO
