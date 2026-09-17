@@ -95,7 +95,6 @@ class Song {
 Song::Song(string t, string a, Artist art, int d, string g, int year) : artist(art) {
             title = t;
             album = a;
-            artist = art;
             duration = d;
             genre = g;
             releaseYear = year;
@@ -103,10 +102,13 @@ Song::Song(string t, string a, Artist art, int d, string g, int year) : artist(a
 
 int main() {
     // Create instance of Artist object 
+    Artist artist1("Taylor Swift", "Pop", 2006, true);
 
     // Create instance of Song object
+    Song song1("Love Story", "Fearless", artist1, 235, "Country Pop", 2008);
 
     // Call song instance display function 
+    song1.display();
 
     return 0; 
 }
