@@ -1,5 +1,7 @@
 #include "Artist.h"
 #include <iostream>
+#include <string>
+using namespace std;
 
 Artist::Artist(string n,string g, int year, bool active) : name(n), genre(g), debutYear(year), isActive(active) {} 
 string Artist::getName() const {return name;} 
