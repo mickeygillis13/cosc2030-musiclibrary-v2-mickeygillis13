@@ -56,12 +56,22 @@ int main() {
     // CALCULATING TICKET PRICE USING POINTERS AND POLYMORPHISM
     // Event pointer is an Event*, but calculateTicketPrice() will call the run the 
     // correct derived class version depending on the object it points to.
+    // Also included try and catch blocks for if a wacky/wrong tier number is entered
     
     Event* eventPtr = &stadiumConcert1;
-    cout << "Stadium Concert Ticket Price: " << eventPtr->calculateTicketPrice(5) << endl;
-    
+    try {
+        cout << "Stadium Concert Ticket Price: " << eventPtr->calculateTicketPrice(5) << endl;
+    } catch (const exception& e) {
+        cerr << "Error calculating stadium concert ticket price: " << e.what() << endl;
+    }
+
     eventPtr = &gaConcert1;
-    cout << "General Admission Concert Ticket Price: " << eventPtr->calculateTicketPrice(2) << endl;
+
+    try {
+        cout << "General Admission Concert Ticket Price: " << eventPtr->calculateTicketPrice(2) << endl;
+    } catch (const exception& e) {
+        cerr << "Error calculating general admission concert ticket price: " << e.what() << endl;
+    }
     cout << "------------------------" << endl;
 
     // Make and print copy of stadiumConcert1
