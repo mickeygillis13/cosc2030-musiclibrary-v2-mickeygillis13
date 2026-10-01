@@ -39,7 +39,7 @@ int main() {
     song1.display();
 
     // Create instance of StadiumConcert object
-    StadiumConcert stadiumConcert1("Eras Tour", "MetLife Stadium", "2024-07-15", true, artist1, setList1, 150.0, 300.0, 50000);
+    StadiumConcert stadiumConcert1("Eras Tour", "MetLife Stadium", "2024-07-15", true, artist1, setList1, 150.0, 50000, 8);
 
     // Create instance of GAConcert object
     GAConcert gaConcert1("Eras Tour", "Central Park", "2024-08-01", true, artist1, setList2, 120.0, 250.0, 2000);
