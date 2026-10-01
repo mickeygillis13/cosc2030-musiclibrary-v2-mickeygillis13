@@ -64,6 +64,12 @@ int main() {
     cout << "General Admission Concert Ticket Price: " << eventPtr->calculateTicketPrice(2) << endl;
     cout << "------------------------" << endl;
 
+    // Make and print copy of stadiumConcert1
+    StadiumConcert stadiumConcertCopy(stadiumConcert1);
+    cout << "COPY OF STADIUM CONCERT:" << endl;
+    printEvent(stadiumConcertCopy);
+    cout << "------------------------" << endl;
+
 
     return 0; 
 }
