@@ -53,5 +53,17 @@ int main() {
     printEvent(gaConcert1);
     cout << "------------------------" << endl;
 
+    // CALCULATING TICKET PRICE USING POINTERS AND POLYMORPHISM
+    // Event pointer is an Event*, but calculateTicketPrice() will call the run the 
+    // correct derived class version depending on the object it points to.
+    
+    Event* eventPtr = &stadiumConcert1;
+    cout << "Stadium Concert Ticket Price: " << eventPtr->calculateTicketPrice(5) << endl;
+    
+    eventPtr = &gaConcert1;
+    cout << "General Admission Concert Ticket Price: " << eventPtr->calculateTicketPrice(2) << endl;
+    cout << "------------------------" << endl;
+
+
     return 0; 
 }
