@@ -21,7 +21,7 @@ void printEvent(const Event& e){
     cout << "Artist: " << e.artist.getName() << endl;
     cout << "Set List: ";
     for (const auto& song : e.setList) {
-        cout << song.getTitle() << ", ";
+        cout << song.getTitle() << " (" << song.getDuration() << "s), ";
     }
     cout << endl;
     cout << "Base Price: $" << e.basePrice << endl;
@@ -52,4 +52,18 @@ void Event::setSetList(vector<Song> s){
 
 void Event::setBasePrice(double price){
     basePrice = price;
+}
+void Event::sortSetListByDuration(){
+    if (setList.size() <= 1) { return; }
+    
+    for (int i = 0; i < setList.size() - 1; i++) {
+        bool swapped = false;
+        for (int j = 0; j < setList.size() - i - 1; j++) {
+            if (setList[j].getDuration() > setList[j + 1].getDuration()) {
+                swap(setList[j], setList[j + 1]);
+                swapped = true;
+            }
+        }
+        if (!swapped) { break; }
+    }
 }

@@ -33,6 +33,7 @@ class Event {
         void setArtist(Artist art);
         void setSetList(vector<Song> s);
         void setBasePrice(double price);
+        void sortSetListByDuration();
         virtual double calculateTicketPrice(int tier) const = 0;
         virtual ~Event();
         friend void printEvent(const Event& e);

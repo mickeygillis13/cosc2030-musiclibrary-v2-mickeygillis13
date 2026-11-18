@@ -80,6 +80,12 @@ int main() {
     printEvent(stadiumConcertCopy);
     cout << "------------------------" << endl;
 
+    // print stadiumConcert1 setList before sort, then sorted by duration
+    cout << "Stadium Concert Set List Before Sorting:" << endl;
+    printEvent(stadiumConcert1);
+    cout << "Stadium Concert Set List Sorted by Duration:" << endl;
+    stadiumConcert1.sortSetListByDuration();
+    printEvent(stadiumConcert1);
 
     return 0; 
 }
